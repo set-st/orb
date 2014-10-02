@@ -1,10 +1,12 @@
 Orb Core
 ===
 
-Мультисайтовое ядро базирующееся на кохане.
+Мультисайтовое ядро базирующееся на кохане.<br />
 Для работы требуются
-nginx
-php_fpm
-redis_client
-memcached
-mysql (optional)
+<ul>
+<li>nginx</li>
+<li>php_fpm</li>
+<li>redis_client</li>
+<li>memcached</li>
+<li>mysql (optional)</li>
+</ul>
