@@ -183,23 +183,17 @@ Kohana::$config->attach(new Config_File);
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
- 
- try {
-echo "asd";
-} catch (Exception $e) {
-    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
-} 
- 
+  
 Kohana::modules(
 	array(
 		'base'       => DOCROOT . 'base',
 		//'auth'       => MODPATH . 'auth', // Basic authentication
 		'cache'      => MODPATH . 'cache', // Caching with multiple backends
 		// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-		'database'   => MODPATH . 'database', // Database access
+		//'database'   => MODPATH . 'database', // Database access
 		//'image'      => MODPATH . 'image', // Image manipulation
 	    //'minion'     => MODPATH . 'minion', // CLI Tasks
-		'orm'        => MODPATH . 'orm', // Object Relationship Mapping
+		//'orm'        => MODPATH . 'orm', // Object Relationship Mapping
 		//'pagination' => MODPATH . 'pagination',
 		//'mpdf'       => MODPATH . 'mpdf',
 		// 'unittest'   => MODPATH.'unittest',   // Unit testing
@@ -209,6 +203,11 @@ Kohana::modules(
 	)
 );
 
+ try {
+echo "asd";
+} catch (Exception $e) {
+    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
+} 
 
 /**
  * Set the default language
