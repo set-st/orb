@@ -184,6 +184,7 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
   
+try {  
 Kohana::modules(
 	array(
 		'base'       => DOCROOT . 'base',
@@ -202,9 +203,6 @@ Kohana::modules(
 		//'email'      => MODPATH . 'email',
 	)
 );
-
- try {
-echo "asd";
 } catch (Exception $e) {
     echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
 } 
