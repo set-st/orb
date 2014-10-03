@@ -105,7 +105,7 @@ abstract class Controller_Template extends Controller {
 
             // Установка переменных сайта
             $this->template
-                ->set('site_name',      'BURRARUM-UFO')
+                ->set('site_name',      'ORB-UFO')
                 ->set('site_slogan',    '')
                 ->set('column_class',   '')
                 ->set('head_title',     $this->title)
@@ -223,8 +223,8 @@ abstract class Controller_Template extends Controller {
     protected function _set_default_server_headers()
     {
         $headers['Content-Type'] = $this->_response_format.'; charset='.Kohana::$charset;
-        $headers['X-Powered-By'] = 'BURRARUM-UFO';
-        $headers['X-Qwert-Version'] = '1.0.0.2 (synapsis)';
+        $headers['X-Powered-By'] = 'ORB-UFO';
+        $headers['X-ORB-Version'] = '1.0.0.3 (synapsis)';
 
         $this->_set_server_headers($headers);
     }
