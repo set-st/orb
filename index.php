@@ -201,7 +201,8 @@ Kohana::modules(
 /**
  * Set the default language
  */
-I18n::lang('ru');
+//I18n::lang('ru');
+I18n::lang('en-us');
 
 
 // Bootstrap the application
