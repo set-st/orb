@@ -1,4 +1,13 @@
 <?php
+
+try {
+echo "asd";
+} catch (Exception $e) {
+    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
+} 
+
+
+
 /**
  * The directory in which your modules are located.
  *
@@ -168,21 +177,13 @@ Kohana::init(
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-//Kohana::$log->attach(new Log_File(DOCROOT . 'logs'));
+
+Kohana::$log->attach(new Log_File(DOCROOT . 'logs'));
 
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
  */
- 
-try {
-Kohana::$log->attach(new Log_File(DOCROOT . 'logs'));
-} catch (Exception $e) {
-    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
-} 
- 
- 
- 
  
 Kohana::$config->attach(new Config_File);
 
