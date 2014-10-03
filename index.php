@@ -165,13 +165,7 @@ Kohana::init(
 		'index_file' => FALSE,
 		'caching'    => TRUE
 	)
-);
- 
-try {
-echo "asd";
-} catch (Exception $e) {
-    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
-}  
+); 
  
 /**
  * Attach the file write to logging. Multiple writers are supported.
@@ -207,6 +201,13 @@ Kohana::modules(
 		//'email'      => MODPATH . 'email',
 	)
 );
+
+try {
+echo "asd";
+} catch (Exception $e) {
+    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
+} 
+
 
 /**
  * Set the default language
