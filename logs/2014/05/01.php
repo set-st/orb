@@ -1,0 +1,27 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2014-05-01 15:52:58 --- EMERGENCY: Cache_Exception [ 0 ]: Redis PHP extention not loaded ~ DOCROOT/base/classes/Cache/Redis.php [ 100 ] in /web/default/modules/cache/classes/Kohana/Cache.php:137
+2014-05-01 15:52:58 --- DEBUG: #0 /web/default/modules/cache/classes/Kohana/Cache.php(137): Cache_Redis->__construct(Array)
+#1 /web/default/base/classes/I18n.php(40): Kohana_Cache::instance()
+#2 /web/default/system/classes/Kohana/I18n.php(81): I18n::load('ru')
+#3 /web/default/base/classes/I18n.php(62): Kohana_I18n::get('Redis PHP exten...', NULL)
+#4 /web/default/system/classes/Kohana/I18n.php(161): I18n::get('Redis PHP exten...')
+#5 /web/default/system/classes/Kohana/Kohana/Exception.php(53): __('Redis PHP exten...', NULL)
+#6 /web/default/base/classes/Cache/Redis.php(100): Kohana_Kohana_Exception->__construct('Redis PHP exten...')
+#7 /web/default/modules/cache/classes/Kohana/Cache.php(137): Cache_Redis->__construct(Array)
+#8 /web/default/base/classes/Widget.php(95): Kohana_Cache::instance()
+#9 /web/default/base/classes/Widget.php(242): Widget->render()
+#10 /web/default/base/views/template.php(54): Widget->__toString()
+#11 /web/default/system/classes/Kohana/View.php(61): include('/web/default/ba...')
+#12 /web/default/system/classes/Kohana/View.php(348): Kohana_View::capture('/web/default/ba...', Array)
+#13 /web/default/system/classes/Kohana/View.php(228): Kohana_View->render()
+#14 /web/default/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#15 /web/default/base/classes/Controller/Template.php(161): Kohana_Response->body(Object(View))
+#16 /web/default/system/classes/Kohana/Controller.php(87): Controller_Template->after()
+#17 [internal function]: Kohana_Controller->execute()
+#18 /web/default/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Welcome))
+#19 /web/default/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#20 /web/default/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#21 /web/default/index.php(225): Kohana_Request->execute()
+#22 /web/default/www/public/index.php(2): require_once('/web/default/in...')
+#23 {main} in /web/default/modules/cache/classes/Kohana/Cache.php:137
