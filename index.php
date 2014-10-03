@@ -1,13 +1,5 @@
 <?php
 
-try {
-echo "asd";
-} catch (Exception $e) {
-    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
-} 
-
-
-
 /**
  * The directory in which your modules are located.
  *
@@ -144,6 +136,13 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
  */
+ 
+try {
+echo "asd";
+} catch (Exception $e) {
+    echo 'Выброшено исключение: ',  $e->getMessage(), "\n";
+}  
+ 
 if (isset($_SERVER['KOHANA_ENV'])) {
 	Kohana::$environment = constant('Kohana::' . strtoupper($_SERVER['KOHANA_ENV']));
 }
